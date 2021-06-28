@@ -17,17 +17,19 @@ Complete Exercise 11-3 (a) from Algorithm Design in Three Acts.
 
 ![image](https://user-images.githubusercontent.com/79822470/123563801-8e12c780-d76b-11eb-8f5b-bd69922544ce.png)
 
-    def fibonacci_dynamic(n):
+    def dynamic(n):
 
-	  A = Array(max(n+1, 2), None)
+	  A = Array(max(n+1, 3), None)
   
       A[0] = 0 
 	
-      A[1] = 1
+      A[1] = 0
+      
+      A[2] = 1
 	
-      for i in range(2, n+1):
+      for i in range(3, n+1):
 	
-        A[i] = A[i-2] + A[i-1]
+        A[i] = A[i-3] + A[i-2] + A[i-1]
 	
       return A[n]
 
